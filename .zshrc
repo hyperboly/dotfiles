@@ -106,10 +106,11 @@ setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
 # Vars
-# export EDITOR="nvim"
+export EDITOR="nvim"
+export GIT_EDITOR="nvim"
 # export GTK_IM_MODULE=fcitx
 # export QT_IM_MODULE=fcitx
 # export XMODIFIERS=@im=fcitx
 
 # Wal
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
