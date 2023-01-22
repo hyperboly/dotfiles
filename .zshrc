@@ -108,6 +108,7 @@ setopt no_auto_menu  # require an extra TAB press to open the completion menu
 # Vars
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
+export PATH="$HOME/.local/bin:$PATH"
 # export GTK_IM_MODULE=fcitx
 # export QT_IM_MODULE=fcitx
 # export XMODIFIERS=@im=fcitx
