@@ -25,7 +25,7 @@ function yesNo {
 playlistDownload () {
     printf "\033c"
     echo "Downloading music from remote, please make sure $musDir is the correct directory"
-    yesNo "Continue? " && yt-dlp  -x --audio-format opus --add-metadata --metadata-from-title "%(title)s" -q -o "$musDir/%(title)s.%(ext)s" --download-archive $musDir/downloaded.txt $URL
+    yesNo "Continue? " && yt-dlp  -x --audio-format opus --add-metadata --metadata-from-title "%(title)s" -o "$musDir/%(title)s.%(ext)s" --download-archive $musDir/downloaded.txt $URL
 }
 
 pkgCheck
