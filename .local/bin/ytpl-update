@@ -7,17 +7,20 @@ pkgCheck () {
         yt-dlp -U
     else
         echo "yt-dlp is not installed"
-        yesNo "Would you like to install yt-dlp [y/n]? " && sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        yesNo "Would you like to install yt-dlp? " && sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
     fi
 }
 
+# Function to prompt user yes or no
+# Yes moves on to next
+# No aborts and exits with code 1
 function yesNo {
     while true; do
         read -p "$* [y/n]: " yn
         case $yn in
             [Yy]*) return 0  ;;  
-            [Nn]*) echo "Aborted" ; exit ;;
+            [Nn]*) echo "Aborted" ; exit 1 ;;
         esac
     done
 }
@@ -27,6 +30,18 @@ playlistDownload () {
     echo "Downloading music from remote, please make sure $musDir is the correct directory"
     yesNo "Continue? " && yt-dlp  -x --audio-format opus --add-metadata --metadata-from-title "%(title)s" -o "$musDir/%(title)s.%(ext)s" --download-archive $musDir/downloaded.txt $URL
 }
+
+cat << "EOF"
+
+__   _____________ _          _   _           _       _            
+\ \ / /_   _| ___ \ |        | | | |         | |     | |           
+ \ V /  | | | |_/ / |  ______| | | |_ __   __| | __ _| |_ ___ _ __ 
+  \ /   | | |  __/| | |______| | | | '_ \ / _` |/ _` | __/ _ \ '__|
+  | |   | | | |   | |____    | |_| | |_) | (_| | (_| | ||  __/ |   
+  \_/   \_/ \_|   \_____/     \___/| .__/ \__,_|\__,_|\__\___|_|   
+                                   | |                             
+                                   |_|                             
+EOF
 
 pkgCheck
 
