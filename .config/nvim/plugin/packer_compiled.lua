@@ -79,6 +79,12 @@ _G.packer_plugins = {
     path = "/home/hypermint/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  vim = {
+    config = { "\27LJ\2\0027\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\24colorscheme dracula\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/hypermint/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/dracula/vim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/hypermint/.local/share/nvim/site/pack/packer/start/vim-airline",
@@ -107,6 +113,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: vim
+time([[Config for vim]], true)
+try_loadstring("\27LJ\2\0027\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\24colorscheme dracula\bcmd\bvim\0", "config", "vim")
+time([[Config for vim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

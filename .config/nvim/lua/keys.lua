@@ -9,3 +9,5 @@ end
 map("n", "<Leader>c", ":! pdflatex %<CR><CR>", { silent = true })
 
 map("n", "F3", ":!texcount % -inc -incbib -sum -1<CR><CR>")
+
+vim.g.mapleader = " "
