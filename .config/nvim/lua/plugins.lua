@@ -11,10 +11,4 @@ return require('packer').startup(function(use)
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
     use 'mhinz/vim-startify'
-    use { 
-        'dracula/vim',
-        config = function()
-            vim.cmd('colorscheme dracula')
-        end
-    }
 end)

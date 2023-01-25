@@ -114,4 +114,4 @@ export PATH="$HOME/.local/bin:$PATH"
 # export XMODIFIERS=@im=fcitx
 
 # Wal
-# (cat ~/.cache/wal/sequences &)
+(cat ~/.cache/wal/sequences &)
