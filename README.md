@@ -15,3 +15,14 @@ Dependencies:
 - neovim
 - zsh
 - alacritty
+- rofi
+
+# Notes
+- To activate i3lock, enter the following
+```sh
+xset 600
+xset -dpms
+```
+- `xset 600` means show the lockscreen in 600 secs
+- `xset -dpms` means don't turn off the screen
+- I am currently using i3, so use qtile and awesome with care; a lot will break
