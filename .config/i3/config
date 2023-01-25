@@ -27,7 +27,6 @@ exec_always xwallpaper --maximize ~/.config/i3/kessokuBandWallPaper.png
 exec picom
 exec flameshot
 exec wal -R
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -36,11 +35,13 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec_always --no-startup-id xss-lock -- i3lock -n -i ~/.config/i3/lockscreen.png
 
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/.config/i3/lockscreen.png
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # Border settings
 hide_edge_borders smart
