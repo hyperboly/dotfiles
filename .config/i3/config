@@ -52,7 +52,9 @@ workspace 4 gaps inner 0
 workspace 4 gaps outer 0
 
 # Workspace Rules
+assign [class="firefox"] 2
 assign [class="discord"] 4
+assign [class="KeePassXC"] 10
 
 # Window Rules
 for_window [class="Sxiv"] floating enable
