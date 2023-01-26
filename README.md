@@ -16,6 +16,7 @@ Dependencies:
 - zsh
 - alacritty
 - rofi
+- playerctl
 
 # Notes
 - To activate i3lock, enter the following
