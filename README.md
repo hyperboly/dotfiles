@@ -21,7 +21,10 @@ Dependencies:
 # Notes
 - This is a bare git repo, so treat it like so
 - I am currently using i3, so use qtile and awesome with care; a lot will break
-- To activate i3lock, enter the following
+- Scripts in `~/.local/bin` require their own dependencies
+
+# XSS-Lock
+- To temporarily activate i3lock, enter the following
     ```sh
     xset 600
     xset -dpms
