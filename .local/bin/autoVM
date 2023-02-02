@@ -1,0 +1,14 @@
+#!/bin/bash
+
+VMs=$(virsh list --all --name)
+
+selectedVM=$(echo $VMs | rofi -dmenu -p "VM ")
+
+onOff=$(printf "Start\nShutdown" | rofi -dmenu -p "ON/OFF ")
+
+if [ "$onOff" = "Start" ] ; then
+    virsh start $selectedVM
+    virt-viewer -f $selectedVM &
+else
+    virsh shutdown $selectedVM
+fi
