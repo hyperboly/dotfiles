@@ -4,11 +4,25 @@ VMs=$(virsh list --all --name)
 
 selectedVM=$(echo $VMs | rofi -dmenu -p "VM ")
 
-onOff=$(printf "Start\nShutdown" | rofi -dmenu -p "ON/OFF ")
+onOff=$(printf "start\nshutdown\nstop\nsuspend\nresume" | rofi -dmenu -p "ON/OFF ")
 
-if [ "$onOff" = "Start" ] ; then
-    virsh start $selectedVM
-    virt-viewer -f $selectedVM &
-else
-    virsh shutdown $selectedVM
-fi
+case $onOff in
+    "start")
+        virsh start $selectedVM
+        virt-viewer -f $selectedVM
+        ;;
+    "shutdown")
+        virsh shutdown $selectedVM
+        ;;
+    "stop")
+        virsh destroy $selectedVM --graceful
+        ;;
+    "suspend")
+        virsh suspend $selectedVM
+        ;;
+    "resume")
+        virsh resume $selectedVM
+        ;;
+esac
+
+exit 0
