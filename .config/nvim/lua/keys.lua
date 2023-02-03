@@ -10,4 +10,5 @@ map("n", "<Leader>c", ":! pdflatex %<CR><CR>", { silent = true })
 
 map("n", "F3", ":!texcount % -inc -incbib -sum -1<CR><CR>")
 
-vim.g.mapleader = " "
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")

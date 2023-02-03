@@ -16,3 +16,5 @@ vim.opt.wrap = true
 vim.opt.scrolloff = 7
 
 vim.opt.splitbelow = true
+
+vim.g.mapleader = " "
