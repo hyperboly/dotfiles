@@ -25,6 +25,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec playerctld daemon
 exec_always xwallpaper --maximize ~/.config/i3/kessokuBandWallPaper.png
 exec picom
+exec fcitx5
 exec flameshot
 exec wal -R
 
