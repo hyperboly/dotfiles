@@ -3,8 +3,32 @@
 SSID=$(iwgetid $(ip route get 8.8.8.8 | awk -- '{printf $5}') --raw)
 INTERFACE=$(ip route get 8.8.8.8 | awk -- '{printf $5}')
 
-printf "Changing DNS to:\nPRIMARY: CLOUDFLARE\nSECONDARY: GOOGLE\n"
+usage () {
+    cat << EOF
+Usage: quick-dns-change -[c|b]
+-c  Change DNS
+-b  Revert DNS
+EOF
+   exit 1
+}
 
-nmcli device modify $INTERFACE ipv4.ignore-auto-dns yes
+while getopts c,r flag
+do
+    case "${flag}" in
+        c)  printf "Changing DNS to:\nPRIMARY: Cloudflare\nSECONDARY: Google"
+            nmcli device modify $INTERFACE ipv4.ignore-auto-dns yes
+            nmcli con mod $SSID ipv4.dns "1.1.1.1,8.8.8.8"
+            echo "Restart NetworkManager.service"
+            ;;
+        r)  printf "Reverting DNS changes (restart NetworkManager and wait for DHCP to refresh)\n"
+            nmcli device modify $INTERFACE ipv4.ignore-auto-dns no
+            printf "remove ipv4.dns\nsave\nquit" | nmcli connection edit $SSID >/dev/null
+            echo "Restart NetworkManager.service"
+            ;;
+        ?)  usage;;
+    esac
+done
 
-nmcli con mod $SSID ipv4.dns "8.8.8.8,1.1.1.1"
+if [ $# == 0 ]; then
+    usage;
+fi
