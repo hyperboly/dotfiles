@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SSID=$(iwgetid $(ip route get 8.8.8.8 | awk -- '{printf $5}') --raw)
+INTERFACE=$(ip route get 8.8.8.8 | awk -- '{printf $5}')
+
+printf "Changing DNS to:\nPRIMARY: CLOUDFLARE\nSECONDARY: GOOGLE\n"
+
+nmcli device modify $INTERFACE ipv4.ignore-auto-dns yes
+
+nmcli con mod $SSID ipv4.dns "8.8.8.8,1.1.1.1"
