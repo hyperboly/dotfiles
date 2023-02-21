@@ -23,7 +23,8 @@ font pango:Ubuntu Mono 14
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec playerctld daemon
-exec_always xwallpaper --maximize ~/.config/i3/kessokuBandWallPaper.png
+# exec_always xwallpaper --maximize ~/.config/i3/kessokuBandWallPaper.png
+exec_always xwallpaper --zoom ~/.config/i3/sfwWall.jpg
 exec picom
 exec fcitx5
 exec flameshot
