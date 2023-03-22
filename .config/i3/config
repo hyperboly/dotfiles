@@ -80,6 +80,7 @@ bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Shift+d exec discord
 bindsym $mod+v exec autoVM
+bindsym $mod+p exec firefox -p
 
 # kill focused window
 bindsym $mod+q kill
