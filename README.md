@@ -9,6 +9,7 @@ Dependencies:
     - i3 (4.22+)
     - qtile
     - awesomewm
+    - hyprland
 - font awesome
 - Ubuntu Mono
 - Noto Fonts
@@ -18,10 +19,27 @@ Dependencies:
 - rofi
 - playerctl
 
+- Dependencies for hyprland on Arch (Depencies above still mostly apply)
+    - grim
+    - slurp
+    - hyprland
+    - swaylock
+    - swayidle
+    - swww
+    - foot
+    - xdg-desktop-portal-hyprland
+    - pipewire
+    - wireplumber
+    - dunst
+    - dracula-gtk-theme
+    - lxappearance
+    - rofi-lbonn-wayland-git
+
 # Notes
 - This is a bare git repo, so treat it like so
 - I am currently using i3, so use qtile and awesome with care; a lot will break
 - Scripts in `~/.local/bin` require their own dependencies
+- Careful, ~/.config/hypr/cyberpunk.gif is pretty large
 
 # XSS-Lock
 - To temporarily activate i3lock, enter the following
