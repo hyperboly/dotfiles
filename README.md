@@ -34,6 +34,7 @@ Dependencies:
     - dracula-gtk-theme
     - lxappearance
     - rofi-lbonn-wayland-git
+    - bibata-cursor-theme-bin
 
 # Notes
 - This is a bare git repo, so treat it like so
@@ -50,3 +51,4 @@ Dependencies:
 - `xset 600` means show the lockscreen in 600 secs
 - `xset -dpms` means don't turn off the screen
 - Configure xss-lock permanently with [this](https://sleeplessbeastie.eu/2022/08/22/how-to-permanently-disable-dpms-using-xorg/)
+- xss-lock doesn't work in wayland (Hyprland)
