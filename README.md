@@ -35,12 +35,15 @@ Dependencies:
     - lxappearance
     - rofi-lbonn-wayland-git
     - bibata-cursor-theme-bin
+    - brightnessctl
+    - pamixer
 
 # Notes
 - This is a bare git repo, so treat it like so
 - I am currently using i3, so use qtile and awesome with care; a lot will break
 - Scripts in `~/.local/bin` require their own dependencies
 - Careful, ~/.config/hypr/cyberpunk.gif is pretty large
+- There is no bar for hyprland, there are keyboard controls though
 
 # XSS-Lock
 - To temporarily activate i3lock, enter the following
