@@ -84,25 +84,10 @@ _G.packer_plugins = {
     path = "/home/hyperboly/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/vim-airline/vim-airline"
   },
-  ["vim-airline-themes"] = {
-    loaded = true,
-    path = "/home/hyperboly/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
-    url = "https://github.com/vim-airline/vim-airline-themes"
-  },
-  ["vim-closer"] = {
-    loaded = true,
-    path = "/home/hyperboly/.local/share/nvim/site/pack/packer/start/vim-closer",
-    url = "https://github.com/rstacruz/vim-closer"
-  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/hyperboly/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
-  },
-  vimwiki = {
-    loaded = true,
-    path = "/home/hyperboly/.local/share/nvim/site/pack/packer/start/vimwiki",
-    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 
