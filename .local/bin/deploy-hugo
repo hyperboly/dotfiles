@@ -3,7 +3,7 @@ USER=root
 HOST=192.168.100.132
 DIR=/dockerVols/nginx/config/www/   # the directory where your web site files should go
 
-cd ~/Public/techsite
+cd ~/Public/blog.hyperboly.net
 
 git pull
 
