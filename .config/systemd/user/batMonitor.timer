@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs every 3 mins
+Requires=batMonitor.service
+
+[Timer]
+Unit=batMonitor.service
+OnCalendar=*:0/03
+
+[Install]
+WantedBy=timers.target

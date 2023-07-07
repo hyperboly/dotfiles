@@ -1,0 +1,9 @@
+[Unit]
+Description=Alert user when battery is below 20%
+
+[Service]
+Type=oneshot
+ExecStart=/home/hyperboly/.local/bin/batalert.sh
+
+[Install]
+WantedBy=default.target
