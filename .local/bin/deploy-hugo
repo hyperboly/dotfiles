@@ -1,12 +1,12 @@
 #!/bin/bash
 USER=root
-HOST=192.168.100.132
-DIR=/dockerVols/nginx/config/www/   # the directory where your web site files should go
+HOST=10.100.30.102
+DIR=/var/www/html # the directory where your web site files should go
 
 cd ~/Public/blog.hyperboly.net
 
 git pull
 
-hugo && rsync -avz --delete public/ ${USER}@${HOST}:${DIR} # this will delete everything on the server that's not in the local public folder 
+hugo && rsync -avz --delete public/ ${USER}@${HOST}:${DIR} # this will delete everything on the server that's not in the local public folder
 
 exit 0
