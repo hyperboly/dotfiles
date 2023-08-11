@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs every hour to reload hyprland
+Requires=reloadHypr.service
+
+[Timer]
+Unit=reloadHypr.service
+OnCalendar=hourly
+
+[Install]
+WantedBy=timers.target
