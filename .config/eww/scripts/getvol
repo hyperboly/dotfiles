@@ -1,3 +1,0 @@
-#!/bin/sh
-pamixer --get-volume
-#| grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%' | head -1
