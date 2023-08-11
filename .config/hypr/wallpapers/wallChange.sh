@@ -8,7 +8,7 @@
 # Use it simply by calling this script instead of swww init
 
 case $(date +%H) in
-	22 | 23 | 00 | 01 | 02 | 03)
+	23 | 00 | 01 | 02 | 03)
 		swww init ; swww img $HOME/.config/hypr/wallpapers/midnight.png  --transition-type any
 
 		;;
@@ -33,7 +33,7 @@ case $(date +%H) in
 		swww init ; swww img $HOME/.config/hypr/wallpapers/dusk.jpg --transition-type any
 
 		;;
-	20 | 21) # Final 8 hours of the day
+	20 | 21 | 22) # Final 8 hours of the day
 		# Same as above, but for the final 8 hours of the day
 
 		swww init ; swww img $HOME/.config/hypr/wallpapers/night.jpg  --transition-type any
