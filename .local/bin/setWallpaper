@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+Help() {
+	# Display help section
+	echo "Set style of wallpaper (school or home)"
+	echo
+	echo "Usage: setWallpaper [-s | -h]"
+	echo "Options:"
+	echo "    -s    Set for school, retrieve wallpaper on a timed basis from ~/.config/hypr/wallpapers"
+	echo "    -h    Set for home, retrieve random wallpapers from ~/Pictures/cunnyWP"
+}
+
+while getopts s,h flag; do
+	case $flag in
+	h)
+		wallChangeRandom
+		;;
+
+	s)
+		wallChangeBasedOnTime.sh
+		;;
+
+	?)
+		Help
+		exit
+		;;
+
+	esac
+done

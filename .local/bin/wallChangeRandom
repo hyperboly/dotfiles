@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+wallpaperdir="$HOME/Pictures/cunnyWP"
+
+FILES=($wallpaperdir/*)
+RANDOMPIC=$(printf "%s\n" "${FILES[RANDOM % ${#FILES[@]}]}")
+
+swww init
+swww img $RANDOMPIC --transition-type any
