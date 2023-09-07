@@ -45,6 +45,9 @@ fi
 setopt rcs
 
 export EDITOR="nvim"
+export VISUAL="nvim"
+export TERM="xterm-256color"
+
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx

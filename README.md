@@ -38,6 +38,7 @@ Dependencies:
     - brightnessctl
     - pamixer
     - swappy
+    - tokyonight-Dark (From these repos, [1](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) [2](https://www.pling.com/p/1681475))
 
 # Notes
 - This is a bare git repo, so treat it like so

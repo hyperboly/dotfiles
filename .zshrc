@@ -33,7 +33,7 @@ zstyle ':z4h:direnv'         enable 'no'
 
 # Enable ('yes') or disable ('no') automatic teleportation of z4h over
 # SSH when connecting to these hosts.
-# zstyle ':z4h:ssh:example-hostname1'   enable 'yes'
+# zstyle ':z4h:ssh:example-hostname1'   enable 'ye
 # zstyle ':z4h:ssh:*.example-hostname2' enable 'no'
 # The default value if none of the overrides above match the hostname.
 # zstyle ':z4h:ssh:*'                   enable 'no'
@@ -71,6 +71,8 @@ z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
 z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
 
 # Define key bindings.
+bindkey '^L' z4h-clear-screen-hard-top
+
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
 z4h bindkey z4h-backward-kill-zword Ctrl+Alt+Backspace
 
