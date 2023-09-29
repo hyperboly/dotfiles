@@ -1,12 +1,12 @@
 #!/bin/bash
-USER=root
-HOST=10.100.30.102
-DIR=/var/www/html # the directory where your web site files should go
+USER=hyperboly
+HOST=10.100.20.118
+DIR=/home/hyperboly/blog # the directory where your web site files should go
 
 cd ~/Public/blog.hyperboly.net
 
 git pull
 
-hugo && rsync -avz --delete public/ ${USER}@${HOST}:${DIR} # this will delete everything on the server that's not in the local public folder
+hugo && rsync -avze 'ssh -p 2200 -i ~/.ssh/access-jumper' --delete public/ ${USER}@${HOST}:${DIR}
 
 exit 0
