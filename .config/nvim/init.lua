@@ -1,5 +1,2 @@
 --require("hyperboly.plugins")
-require("hyperboly.init")
-require("hyperboly.lazy")
-require("hyperboly.remap")
-require("hyperboly.set")
+require("hyperboly")
