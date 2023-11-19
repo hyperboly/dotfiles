@@ -44,11 +44,14 @@ fi
 
 setopt rcs
 
+# Vars
 export EDITOR="nvim"
+export GIT_EDITOR="nvim"
+export PATH="$HOME/.local/bin:$PATH"
+
 export VISUAL="nvim"
 export TERM="xterm-256color"
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
-# . "$HOME/.cargo/env"
