@@ -1,0 +1,23 @@
+(defwidget wifi []
+    (eventbox
+        :onhover "${EWW_CMD} update wifi_rev=true"
+        :onhoverlost "${EWW_CMD} update wifi_rev=false"
+        (box
+            :space-evenly false
+            :spacing "5"
+            (button
+                :class "wifi"
+                :onclick "foot nmtui &"
+                WLAN_ICON
+            )
+            (revealer
+                :transition "slideleft"
+                :reveal wifi_rev
+                (label
+                    :class "wifiSSID"
+                    :text ESSID_WLAN
+                )
+            )
+        )
+    )
+)

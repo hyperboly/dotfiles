@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+audio() {
+    LOCK_FILE_AUDIO="$HOME/.cache/eww-audio.lock"
+    EWW_BIN="/sbin/eww"
+
+    run() {
+        ${EWW_BIN} -c $HOME/.config/eww/right open audio_ctl 
+    }
+
+# Open widgets
+    if [[ ! -f "$LOCK_FILE_AUDIO" ]]; then
+        ${EWW_BIN} -c $HOME/.config/eww/right close system calendar music
+        touch "$LOCK_FILE_AUDIO"
+        run && echo "ok good!"
+    else
+        ${EWW_BIN} -c $HOME/.config/eww/right close audio_ctl
+        rm "$LOCK_FILE_AUDIO" && echo "closed"
+    fi
+}
+
+if [ "$1" = "audio" ]; then
+    audio
+fi

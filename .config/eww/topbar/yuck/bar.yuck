@@ -1,0 +1,25 @@
+(defwindow right
+    :monitor 1
+    :geometry (geometry
+        :x "1%"
+        :y "2%"
+        :width "15%"
+        :height "40px"
+        :anchor "top right")
+    :exclusive true
+    :stacking "fg"
+    :focusable false
+(right))
+
+(defwidget right []
+    (box
+        :orientation "h" 
+        :space-evenly false  
+        :halign "end"
+        :class "right"
+        (bat)
+        (bright)
+        (volume)
+        (wifi)
+    )
+)

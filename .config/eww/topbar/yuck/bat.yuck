@@ -1,0 +1,16 @@
+(defwidget bat []
+    (box
+        :class "battery"
+        (circular-progress
+            :class "batBar"
+            :value "${battery}.0"
+            :thickness 2
+            (button
+                :class "batIcon"
+                :onclick "scripts/pop bat"
+                :tooltip "${battery}%"
+                ""
+            )
+        )
+    )
+)

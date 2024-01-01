@@ -1,0 +1,30 @@
+(defwidget bright []
+    (eventbox
+        :onhover "${EWW_CMD} update br_rev=true"
+        :onhoverlost "${EWW_CMD} update br_rev=false"
+        (box
+            :class "module"
+            :orientation "h"
+            :space-evenly false
+            :spacing "0"
+            (label
+                :class "brightIcon"
+                :tooltip "${brightness_percent}%"
+                :text "󰃠"
+            )
+            (revealer
+                :transition "slideleft"
+                :reveal br_rev
+                (scale
+                    :class "brightnessBar"
+                    :value "${brightness_percent}.0"
+                    :orientation "h"
+                    :tooltip "${brightness_percent}%"
+                    :max 100
+                    :min 0
+                    :onchange "brightnessctl set {}%"
+                )
+            )
+        )
+    )
+)

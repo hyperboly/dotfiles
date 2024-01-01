@@ -1,0 +1,13 @@
+(defpoll brightness_percent :interval "5s" "brightnessctl -m | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
+(defvar br_rev false)
+
+(defpoll battery :interval "15s" "scripts/battery --bat")
+(defpoll battery_status :interval "1m" "scripts/battery --bat-st")
+
+(defpoll COL_WLAN :interval "1m" "scripts/wifi --COL")
+(defpoll ESSID_WLAN :interval "1m" "scripts/wifi --ESSID")
+(defpoll WLAN_ICON :interval "1m" "scripts/wifi --ICON")
+(defvar wifi_rev false)
+
+(defpoll volume_percent :interval "1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defvar vol_rev false)

@@ -24,7 +24,7 @@ ls.add_snippets('c', {
     s("main", {
         t({ "#include <stdio.h>" }),
         t({ "", "" }),
-        t({ "", "int main() {" }),
+        t({ "", "int main(void) {" }),
         t({ "", "\t" }),
         i(1),
         t({ "", "\treturn 0;"}),

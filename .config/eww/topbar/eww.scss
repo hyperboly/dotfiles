@@ -1,0 +1,55 @@
+/* General */
+
+*{
+	all: unset;
+	font-family: Symbols Nerd Font Mono;
+	font-family: Monocraft;
+    font-size: 20px;
+}
+
+tooltip.background {
+    background-color: #0f0f17;
+    font-size: 18px;
+    border-radius: 10px;
+    color: #bfc9db;
+}
+
+tooltip label {
+    margin: 6px;
+}
+
+.right {
+    background-color: #000000;
+    border-radius: 12px;
+}
+
+scale trough {
+    background-image: linear-gradient(to right, #e4c9af 30%, #f2cdcd 50%, #e0b089 100% *50);
+    border-radius: 5px;
+    min-height: 10px;
+    min-width: 80px;
+    margin: .3rem 0 .3rem 0;
+}
+
+/* Widgets */
+
+.brightIcon {
+    color: #f5a97f;
+}
+
+.volumeIcon {
+    color: #a1bdce;
+    margin: 0px 10px 0px 10px;
+}
+
+.batBar {
+    color: #a1bdce;
+    background-color: #38384d;
+    border-radius: 10px;
+}
+
+.batIcon {
+    color: #f5a97f;
+    font-size: 1px;
+    margin: 6px;
+}

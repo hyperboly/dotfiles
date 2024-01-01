@@ -1,0 +1,30 @@
+(defwidget volume []
+    (eventbox
+        :onhover "${EWW_CMD} update vol_rev=true"
+        :onhoverlost "${EWW_CMD} update vol_rev=false"
+        (box
+            :class "module"
+            :orientation "h"
+            :space-evenly false
+            :spacing "3"
+            (button
+                :class "volumeIcon"
+                :onclick "scripts/pop audio"
+                ""
+            )
+            (revealer
+                :transition "slideleft"
+                :reveal vol_rev
+                (scale
+                    :orientation "h"
+                    :class "volBar"
+                    :value "${volume_percent}.0"
+                    :tooltip "${volume_percent}%"
+                    :max 100
+                    :min 0
+                    :onchange "amixer -D pulse sset Master {}%"
+                )
+            )
+        )
+    )
+)
