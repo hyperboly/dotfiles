@@ -2,14 +2,15 @@
     (box
         :class "battery"
         (circular-progress
-            :class "batBar"
+            :class "bat-bar"
             :value "${battery}.0"
-            :thickness 2
+            :thickness 4
+            :style "font-size: 4px;"
             (button
-                :class "batIcon"
+                :class "bat-icon"
                 :onclick "scripts/pop bat"
                 :tooltip "${battery}%"
-                ""
+                "󰁹"
             )
         )
     )

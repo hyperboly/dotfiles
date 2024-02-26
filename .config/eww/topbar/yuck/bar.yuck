@@ -1,25 +1,118 @@
-(defwindow right
+(defwindow left0
+    :monitor 0
+    :geometry (geometry
+        :x "0%"
+        :y "-3%"
+        :width "8%"
+        :height "3%"
+        :anchor "top left")
+    :exclusive true
+    :stacking "fg"
+    :focusable false
+    (left)
+)
+
+(defwindow left1
     :monitor 1
     :geometry (geometry
-        :x "1%"
-        :y "2%"
+        :x "0%"
+        :y "-3%"
+        :width "8%"
+        :height "3%"
+        :anchor "top left")
+    :exclusive true
+    :stacking "fg"
+    :focusable false
+    (left)
+)
+
+(defwindow mid0
+    :monitor 0
+    :geometry (geometry
+        :x "0%"
+        :y "0%"
         :width "15%"
-        :height "40px"
+        :height "3%"
+        :anchor "top center")
+    :exclusive true
+    :stacking "fg"
+    :focusable false
+    (workspaces
+         :halign "center"
+         :hexpand false
+         :orientation "h"
+         :space-evenly false
+    )
+)
+
+(defwindow mid1
+    :monitor 1
+    :geometry (geometry
+        :x "0%"
+        :y "0%"
+        :width "15%"
+        :height "3%"
+        :anchor "top center")
+    :exclusive true
+    :stacking "fg"
+    :focusable false
+    (workspaces
+         :halign "center"
+         :hexpand false
+         :orientation "h"
+         :space-evenly true
+    )
+)
+
+(defwindow right0
+    :monitor 0
+    :geometry (geometry
+        :x "0%"
+        :y "-3%"
+        :width "10%"
+        :height "3%"
         :anchor "top right")
     :exclusive true
     :stacking "fg"
     :focusable false
-(right))
+    (right)
+)
+
+(defwindow right1
+    :monitor 1
+    :geometry (geometry
+        :x "0%"
+        :y "-3%"
+        :width "10%"
+        :height "3%"
+        :anchor "top right")
+    :exclusive true
+    :stacking "fg"
+    :focusable false
+    (right)
+)
 
 (defwidget right []
     (box
+        :class "right"
         :orientation "h" 
         :space-evenly false  
         :halign "end"
-        :class "right"
         (bat)
         (bright)
         (volume)
         (wifi)
+    )
+)
+
+(defwidget left []
+    (box
+        :class "left"
+        :orientation "h"
+        :space-evenly false  
+        :halign "end"
+        (day-of-week)
+        (sep)
+        (time)
     )
 )

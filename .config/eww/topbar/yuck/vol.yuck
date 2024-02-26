@@ -3,7 +3,7 @@
         :onhover "${EWW_CMD} update vol_rev=true"
         :onhoverlost "${EWW_CMD} update vol_rev=false"
         (box
-            :class "module"
+            :class "volume"
             :orientation "h"
             :space-evenly false
             :spacing "3"
@@ -17,7 +17,7 @@
                 :reveal vol_rev
                 (scale
                     :orientation "h"
-                    :class "volBar"
+                    :class "vol-bar"
                     :value "${volume_percent}.0"
                     :tooltip "${volume_percent}%"
                     :max 100

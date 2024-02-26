@@ -3,7 +3,7 @@ Description=Reload hyprland
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/hyprctl reload
+ExecStart=/sbin/hyprctl reload
 
 [Install]
 WantedBy=default.target

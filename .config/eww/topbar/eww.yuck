@@ -4,3 +4,7 @@
 (include "yuck/bright.yuck")
 (include "yuck/wifi.yuck")
 (include "yuck/variables.yuck")
+(include "yuck/workspaces.yuck")
+(include "yuck/time.yuck")
+(include "yuck/day-of-week.yuck")
+(include "yuck/sep.yuck")

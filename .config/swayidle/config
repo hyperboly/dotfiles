@@ -1,3 +1,0 @@
-timeout 300 'swaylock -f -i $HOME/.config/hypr/draculaLeaves.png'
-timeout 600 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
-before-sleep 'swaylock -f -i $HOME/.config/hypr/draculaLeaves.png'
