@@ -1,12 +1,9 @@
 #!/bin/bash
-USER=hyperboly
-HOST=10.100.20.118
-DIR=/home/hyperboly/blog # the directory where your web site files should go
 
 cd ~/Public/blog.hyperboly.net
 
 git pull
 
-hugo && rsync -avze 'ssh -p 2200 -i ~/.ssh/access-jumper' --delete public/ ${USER}@${HOST}:${DIR}
+hugo && rsync -avz --delete public/ blog:/var/www/html
 
 exit 0
